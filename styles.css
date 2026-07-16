@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("fonts/HelveticaNeueLTPro-Lt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("fonts/HelveticaNeueLTPro-Roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("fonts/HelveticaNeueLTPro-Md.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 768px) {
+  .md-no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .md-no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.light body,
+  html.light header h1,
+  html.light #selected .project-title,
+  html.light #about h2,
+  html.light #about h3,
+  html.light .contact-primary-link,
+  html.light .contact-availability-heading,
+  html.light .theme-project-button {
+    transition: none;
+  }
+}
+
+/* ── Theme: light mode overrides ── */
+html.light body {
+  background-color: #ffffff !important;
+}
+
+html.light header h1,
+html.light #selected .project-title,
+html.light .contact-primary-link,
+html.light .contact-availability-heading {
+  color: #171717 !important;
+}
+
+html.light #about h2,
+html.light #about h3 {
+  color: #2f2f2f !important;
+}
+
+html.light #email-text {
+  color: #171717 !important;
+}
+
+html.light #copy-email-btn:hover {
+  color: #171717 !important;
+}
+
+#copy-email-btn:focus-visible {
+  outline: 1px solid #9c9c9c;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+html.light .theme-project-button:hover {
+  color: #ffffff !important;
+  background-color: #5d7cff !important;
+  border-color: #5d7cff !important;
+}
+
+/* Smooth theme transitions */
+body,
+header h1,
+#selected .project-title,
+#about h2,
+#about h3,
+.contact-primary-link,
+.contact-availability-heading,
+.theme-project-button {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+#theme-toggle {
+  padding: 0;
+  background: transparent;
+}
+
+#theme-toggle:focus-visible {
+  outline: 1px solid #9c9c9c;
+  outline-offset: 2px;
+}
+
+#theme-toggle-dot {
+  transform: translate(2px, 2px);
+}
+
+#theme-toggle-dot.theme-toggle-dot--on {
+  transform: translate(18px, 2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #theme-toggle-dot {
+    transition: none;
+  }
+}

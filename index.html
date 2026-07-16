@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Antonio Domínguez — UX/UI & Web Designer portfolio" />
+    <title>Antonio Domínguez — Portfolio</title>
+
+    <link rel="stylesheet" href="styles-compiled.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      (function () {
+        if (localStorage.getItem("theme") === "light") {
+          document.documentElement.classList.add("light");
+        }
+      })();
+    </script>
+  </head>
+
+  <body class="bg-[#171717] font-helvetica font-normal text-white antialiased">
+    <div class="flex min-h-screen flex-col px-4 py-6 md:relative md:flex md:h-screen md:max-h-screen md:flex-col md:overflow-hidden">
+      <div class="flex min-h-0 flex-1 flex-col md:flex md:flex-row md:gap-8 md:w-full md:max-w-full md:overflow-hidden">
+        <div class="flex flex-col md:w-[28%] md:shrink-0">
+          <header class="fixed top-0 left-0 z-50 flex w-full items-start justify-between bg-transparent px-4 pb-4 pt-6 md:static md:w-full md:shrink-0 md:bg-transparent md:p-0">
+            <div>
+              <h1 class="font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white md:text-[24px] md:leading-[28px]">
+                Antonio Domínguez
+              </h1>
+              <p class="font-helvetica text-[12px] font-normal leading-[16px] tracking-[-0.5px] text-[#9C9C9C]">
+                UX/UI & Web Designer
+              </p>
+            </div>
+
+            <button
+              type="button"
+              id="theme-toggle"
+              role="switch"
+              class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border border-[#9C9C9C] transition-colors duration-300 focus:outline-none md:absolute md:top-6 md:right-4 md:z-50"
+              aria-label="Toggle theme"
+              aria-checked="false"
+            >
+              <span
+                id="theme-toggle-dot"
+                class="pointer-events-none inline-block h-3.5 w-3.5 translate-x-[2px] translate-y-[2px] transform rounded-full bg-[#9C9C9C] shadow-sm ring-0 transition-transform duration-300 ease-in-out"
+              ></span>
+            </button>
+          </header>
+
+          <nav class="mt-[110px] md:mt-8" aria-label="Primary">
+            <ul class="flex flex-col items-start gap-2">
+              <li>
+                <a
+                  href="#selected"
+                  aria-current="page"
+                  data-value="Selected"
+                  class="nav-link scramble-trigger inline-block text-[16px] leading-[20px] tracking-[-0.5px] font-normal text-[#5D7CFF] hover:text-[#5D7CFF]"
+                >
+                  <span class="scramble-text pointer-events-none">Selected</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  data-value="About"
+                  class="nav-link scramble-trigger inline-block text-[16px] leading-[20px] tracking-[-0.5px] font-normal text-[#9C9C9C] hover:text-[#5D7CFF]"
+                >
+                  <span class="scramble-text pointer-events-none">About</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  data-value="Contact"
+                  class="nav-link scramble-trigger inline-block text-[16px] leading-[20px] tracking-[-0.5px] font-normal text-[#9C9C9C] hover:text-[#5D7CFF]"
+                >
+                  <span class="scramble-text pointer-events-none">Contact</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex min-h-0 flex-1 flex-col md:h-full md:min-w-0 md:flex-1 md:max-w-[62%] lg:max-w-[70%]">
+          <main class="md-no-scrollbar pb-24 pt-[75px] md:min-h-0 md:flex-1 md:overflow-y-auto md:overscroll-y-contain md:pt-[82px]">
+          <div id="main-scroll-content">
+          <section id="selected" class="mt-auto flex flex-col gap-6 transition-opacity duration-300 opacity-100 md:w-full">
+            <div class="flex flex-col gap-12 lg:gap-16 xl:gap-24">
+              <div class="flex w-full flex-col gap-4 md:flex-col md:items-end lg:items-start">
+                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[85%] md:max-w-2xl">
+                  <div class="mb-4 flex w-full items-center justify-between">
+                    <a
+                      href="https://koreproject.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-title font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white transition-colors duration-300 hover:opacity-80 cursor-pointer"
+                    >
+                      Kore
+                    </a>
+                    <a
+                      href="https://koreproject.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-[#5D7CFF] hover:text-white focus:outline-none"
+                    >
+                      Live
+                    </a>
+                  </div>
+                  <a href="https://koreproject.netlify.app/" target="_blank" rel="noopener noreferrer" class="block w-full">
+                      <img
+                        src="img/Kore_Project_01.png"
+                        alt="Kore project preview"
+                        class="w-full h-auto object-cover"
+                      />
+                    </a>
+                    <p class="mt-4 font-helvetica text-[14px] font-normal leading-[18px] tracking-[-0.5px] text-[#9C9C9C] md:w-full md:text-[16px] md:leading-[22px]">
+                      Visual identity, user interface design, and frontend implementation for an engineering and architecture concept. This project showcases an end-to-end responsive design workflow, turning technical structures into a refined and minimal web experience.
+                    </p>
+                    <div class="mt-4 flex w-full flex-wrap gap-x-2 gap-y-2">
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Figma</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">HTML</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Tailwind</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Javascript</span>
+                    </div>
+                  </article>
+              </div>
+
+              <div class="flex w-full flex-col gap-4 md:flex-col md:items-end lg:items-start">
+                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[85%] md:max-w-2xl">
+                  <div class="mb-4 flex w-full items-center justify-between">
+                    <a
+                      href="https://shop-0001.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-title font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white transition-colors duration-300 hover:opacity-80 cursor-pointer"
+                    >
+                      Shop_0001
+                    </a>
+                    <a
+                      href="https://shop-0001.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-[#5D7CFF] hover:text-white focus:outline-none"
+                    >
+                      Live
+                    </a>
+                  </div>
+                  <a href="https://shop-0001.vercel.app/" target="_blank" rel="noopener noreferrer" class="block w-full">
+                      <img
+                        src="img/shop_0001_01.png"
+                        alt="Headless E-commerce project preview"
+                        class="w-full h-auto object-cover"
+                      />
+                    </a>
+                    <p class="mt-4 font-helvetica text-[14px] font-normal leading-[18px] tracking-[-0.5px] text-[#9C9C9C] md:w-full md:text-[16px] md:leading-[22px]">
+                      A fully functional e-commerce storefront utilizing modern headless architecture. By decoupling the frontend from Shopify's backend, this project combines absolute design freedom with lightning-fast performance. Pure custom code, zero templates, and a seamless user experience.
+                    </p>
+                    <div class="mt-4 flex w-full flex-wrap gap-x-2 gap-y-2">
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Figma</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">SvelteKit</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Tailwind</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Javascript</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Shopify API</span>
+                    </div>
+                  </article>
+              </div>
+            </div>
+          </section>
+
+        <section id="about" class="hidden flex flex-col opacity-0 transition-opacity duration-300">
+          <div class="md:max-w-2xl lg:max-w-xl xl:max-w-2xl">
+          <div class="border-b border-[#9C9C9C] pb-8 mb-8">
+            <h2 class="mb-[10px] font-helvetica-md text-[18px] leading-[26px] tracking-[-0.5px] font-normal text-white">
+              Profile
+            </h2>
+
+            <div class="flex flex-col gap-4">
+              <p class="font-helvetica text-[14px] leading-[18px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]">
+                I am a UX/UI and Web designer based in Málaga, Spain, specializing in high-performance websites.
+              </p>
+              <p class="font-helvetica text-[14px] leading-[18px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]">
+                Formed in graphic design and advanced UX/UI, my practice bridges the gap between clean visual systems and modern, functional code implementation. I deliver end to end digital solutions, from initial Figma prototyping to responsive web deployments, collaborating with brands on design, development, and content strategy.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="font-helvetica-md text-[18px] leading-[26px] tracking-[-0.5px] font-normal text-white">
+              What can I do for you
+            </h2>
+
+            <div class="mt-4 flex flex-col gap-4">
+              <div>
+                <h3 class="font-helvetica-md text-[15px] leading-[20px] tracking-[-0.5px] font-normal text-white">
+                  UX/UI Design
+                </h3>
+                <p class="font-helvetica text-[14px] leading-[18px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]">
+                  Designing responsive digital interfaces and interactive prototypes from scratch.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-helvetica-md text-[15px] leading-[20px] tracking-[-0.5px] font-normal text-white">
+                  Front-End Deployment
+                </h3>
+                <p class="font-helvetica text-[14px] leading-[18px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]">
+                  Translating finished visual designs into clean, functional websites.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="font-helvetica-md text-[15px] leading-[20px] tracking-[-0.5px] font-normal text-white">
+                  Headless E-commerce
+                </h3>
+                <p class="font-helvetica text-[14px] leading-[18px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]">
+                  Custom online stores using decoupled, modern architectures. Tailored shopping experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section id="contact" class="hidden flex flex-col opacity-0 transition-opacity duration-300">
+          <div class="md:max-w-2xl lg:max-w-xl xl:max-w-2xl">
+          <div class="flex flex-col gap-2">
+            <a
+              href="https://www.linkedin.com/in/antonio-dom%C3%ADnguez-mart%C3%ADn-28553014a"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-value="LinkedIn"
+              class="contact-primary-link block text-[15px] leading-[20px] tracking-[-0.5px] font-normal text-white"
+            >
+              LinkedIn
+            </a>
+            <div class="flex items-center gap-2 font-normal text-white text-[15px] leading-[20px] tracking-[-0.5px]">
+              <span id="email-text">dominguezantoniowork@gmail.com</span>
+              <button
+                type="button"
+                id="copy-email-btn"
+                data-lenis-prevent
+                class="text-[#9C9C9C] hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer flex items-center gap-1 p-1"
+                aria-label="Copy email address"
+              >
+                <svg id="copy-svg" class="w-[14px] h-[14px] shrink-0 transition-transform duration-200 active:scale-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <svg id="check-svg" class="w-[14px] h-[14px] shrink-0 hidden" viewBox="0 0 24 24" fill="none" stroke="#5D7CFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span id="copy-feedback-text" class="hidden text-[13px] leading-none text-[#5D7CFF]" aria-live="polite">Copied!</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-[24px]">
+            <p class="contact-availability-heading font-helvetica text-[15px] leading-[18px] tracking-[-0.5px] font-normal text-white">
+              Availability
+            </p>
+            <p class="font-helvetica text-[14px] leading-[20px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]">
+              08:00 AM — 17:00 PM (CET)
+            </p>
+            <p id="spain-clock" class="font-helvetica mt-1 text-[14px] leading-[20px] tracking-[-0.5px] font-normal text-[#9C9C9C] md:text-[16px] md:leading-[22px]"></p>
+          </div>
+          </div>
+        </section>
+          </div>
+          </main>
+        </div>
+      </div>
+
+      <footer class="mt-auto w-full shrink-0 pt-16 md:pb-6 md:pt-0">
+        <p class="text-left text-[12px] text-[#818181] md:w-[20%]">
+          © 2026
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+
+      const LENIS_BREAKPOINT = 768;
+      const sections = document.querySelectorAll("#main-scroll-content > section");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const mainElement = document.querySelector("main");
+      const mainScrollContent = document.getElementById("main-scroll-content");
+      const validSectionIds = ["selected", "about", "contact"];
+
+      let lenis = null;
+      let lenisRafId = null;
+      let lenisResizeTimeout = null;
+
+      function forcePageScrollToTop() {
+        window.scrollTo(0, 0);
+
+        if (mainElement) {
+          mainElement.scrollTop = 0;
+        }
+
+        if (lenis) {
+          lenis.scrollTo(0, { immediate: true });
+        }
+      }
+
+      function isDesktopViewport() {
+        return window.innerWidth >= LENIS_BREAKPOINT;
+      }
+
+      function shouldEnableLenis(sectionId) {
+        if (isDesktopViewport()) {
+          return sectionId === "selected";
+        }
+
+        return sectionId === "selected" || sectionId === "about";
+      }
+
+      function stopLenisRaf() {
+        if (lenisRafId !== null) {
+          cancelAnimationFrame(lenisRafId);
+          lenisRafId = null;
+        }
+      }
+
+      function destroyLenis() {
+        stopLenisRaf();
+
+        if (lenis) {
+          lenis.destroy();
+          lenis = null;
+        }
+      }
+
+      function startLenisRaf() {
+        stopLenisRaf();
+
+        function raf(time) {
+          if (!lenis) return;
+          lenis.raf(time);
+          lenisRafId = requestAnimationFrame(raf);
+        }
+
+        lenisRafId = requestAnimationFrame(raf);
+      }
+
+      function initLenis(sectionId) {
+        destroyLenis();
+
+        if (!shouldEnableLenis(sectionId) || typeof Lenis === "undefined") {
+          return;
+        }
+
+        if (isDesktopViewport()) {
+          if (!mainElement || !mainScrollContent) return;
+
+          lenis = new Lenis({
+            wrapper: mainElement,
+            content: mainScrollContent,
+            lerp: 0.08,
+            smoothWheel: true,
+            syncTouch: true,
+          });
+        } else {
+          lenis = new Lenis({
+            lerp: 0.08,
+            smoothWheel: true,
+            syncTouch: true,
+          });
+        }
+
+        startLenisRaf();
+
+        requestAnimationFrame(() => {
+          lenis?.resize();
+          lenis?.scrollTo(0, { immediate: true });
+        });
+      }
+
+      function syncLenis(sectionId) {
+        if (shouldEnableLenis(sectionId)) {
+          initLenis(sectionId);
+          return;
+        }
+
+        destroyLenis();
+      }
+
+      function resetMainScroll() {
+        forcePageScrollToTop();
+      }
+
+      function getTargetIdFromHash() {
+        const hash = window.location.hash.slice(1);
+        return validSectionIds.includes(hash) ? hash : "selected";
+      }
+
+      function setActiveNav(targetId) {
+        navLinks.forEach((link) => {
+          const isActive = link.getAttribute("href") === `#${targetId}`;
+
+          link.classList.toggle("text-[#5D7CFF]", isActive);
+          link.classList.toggle("text-[#9C9C9C]", !isActive);
+
+          if (isActive) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      }
+
+      function applySection(targetId, instant = false) {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        const current = document.querySelector("#main-scroll-content > section:not(.hidden)");
+        if (current === target) {
+          setActiveNav(targetId);
+          syncLenis(targetId);
+          resetMainScroll();
+          return;
+        }
+
+        if (instant) {
+          sections.forEach((section) => {
+            section.classList.add("hidden");
+            section.classList.remove("opacity-100");
+            section.classList.add("opacity-0");
+          });
+
+          target.classList.remove("hidden");
+          target.classList.remove("opacity-0");
+          target.classList.add("opacity-100");
+          setActiveNav(targetId);
+          resetMainScroll();
+          syncLenis(targetId);
+          return;
+        }
+
+        sections.forEach((section) => {
+          if (!section.classList.contains("hidden")) {
+            section.classList.remove("opacity-100");
+            section.classList.add("opacity-0");
+          }
+        });
+
+        setTimeout(() => {
+          sections.forEach((section) => {
+            section.classList.add("hidden");
+            section.classList.remove("opacity-100");
+            section.classList.add("opacity-0");
+          });
+
+          target.classList.remove("hidden");
+
+          setTimeout(() => {
+            target.classList.remove("opacity-0");
+            target.classList.add("opacity-100");
+          }, 20);
+
+          setActiveNav(targetId);
+          resetMainScroll();
+          syncLenis(targetId);
+        }, 300);
+      }
+
+      function handleRoute(instant = false) {
+        applySection(getTargetIdFromHash(), instant);
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        forcePageScrollToTop();
+        handleRoute(true);
+        requestAnimationFrame(() => {
+          forcePageScrollToTop();
+        });
+      });
+
+      window.addEventListener("pageshow", (event) => {
+        if (event.persisted) {
+          forcePageScrollToTop();
+        }
+      });
+
+      window.addEventListener("hashchange", () => {
+        handleRoute(false);
+      });
+
+      window.addEventListener("resize", () => {
+        clearTimeout(lenisResizeTimeout);
+        lenisResizeTimeout = setTimeout(() => {
+          syncLenis(getTargetIdFromHash());
+        }, 150);
+      });
+
+      const scrambleLetters = "abcdefghijklmnopqrstuvwxyz*+-/";
+
+      function runTextScramble(link, textEl) {
+        const value = link.dataset.value;
+        if (!value) return;
+
+        if (link._scrambleInterval) {
+          clearInterval(link._scrambleInterval);
+        }
+
+        let iteration = 0;
+
+        link._scrambleInterval = setInterval(() => {
+          textEl.textContent = value
+            .split("")
+            .map((char, index) => {
+              if (char === " ") return " ";
+              if (index < iteration) return value[index];
+              return scrambleLetters[Math.floor(Math.random() * scrambleLetters.length)];
+            })
+            .join("");
+
+          if (iteration >= value.length) {
+            clearInterval(link._scrambleInterval);
+            link._scrambleInterval = null;
+            textEl.textContent = value;
+            return;
+          }
+
+          iteration += 0.5;
+        }, 20);
+      }
+
+      document.querySelectorAll(".scramble-trigger").forEach((link) => {
+        const textEl = link.querySelector(".scramble-text");
+        if (!textEl) return;
+
+        link.style.minWidth = `${link.offsetWidth}px`;
+
+        link.addEventListener("mouseenter", () => {
+          if (link._scrambleInterval) return;
+          runTextScramble(link, textEl);
+        });
+      });
+
+      function updateSpainClock() {
+        const clockElement = document.getElementById("spain-clock");
+        if (!clockElement) return;
+
+        const options = {
+          timeZone: "Europe/Madrid",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        };
+
+        const spainTime = new Date().toLocaleTimeString("es-ES", options);
+        clockElement.textContent = `${spainTime} Málaga, Spain`;
+      }
+
+      updateSpainClock();
+      setInterval(updateSpainClock, 1000);
+
+      (function initEmailCopyOnly() {
+        const copyBtn = document.getElementById("copy-email-btn");
+        const emailText = "dominguezantoniowork@gmail.com";
+
+        if (!copyBtn) return;
+
+        const copySvg = document.getElementById("copy-svg");
+        const checkSvg = document.getElementById("check-svg");
+        const copyFeedbackText = document.getElementById("copy-feedback-text");
+        let isTransitioning = false;
+
+        copyBtn.addEventListener("click", function () {
+          if (isTransitioning) return;
+
+          try {
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+              navigator.clipboard.writeText(emailText).then(showFeedback).catch(fallbackCopy);
+            } else {
+              fallbackCopy();
+            }
+          } catch (err) {
+            console.error("Could not copy", err);
+          }
+        });
+
+        function fallbackCopy() {
+          try {
+            const textarea = document.createElement("textarea");
+            textarea.value = emailText;
+            textarea.setAttribute("readonly", "");
+            textarea.style.position = "fixed";
+            textarea.style.left = "-9999px";
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            showFeedback();
+          } catch (err) {
+            console.error("Could not copy", err);
+          }
+        }
+
+        function showFeedback() {
+          if (!copySvg || !checkSvg) return;
+
+          isTransitioning = true;
+          copySvg.classList.add("hidden");
+          checkSvg.classList.remove("hidden");
+          copyFeedbackText?.classList.remove("hidden");
+
+          setTimeout(function () {
+            checkSvg.classList.add("hidden");
+            copyFeedbackText?.classList.add("hidden");
+            copySvg.classList.remove("hidden");
+            isTransitioning = false;
+          }, 2000);
+        }
+      })();
+
+      (function initThemeToggle() {
+        const root = document.documentElement;
+        const toggle = document.getElementById("theme-toggle");
+        const dot = document.getElementById("theme-toggle-dot");
+
+        if (!toggle || !dot) return;
+
+        function syncToggleUi(isLight) {
+          toggle.setAttribute("aria-checked", isLight ? "true" : "false");
+          toggle.setAttribute(
+            "aria-label",
+            isLight ? "Switch to dark mode" : "Switch to light mode"
+          );
+          dot.classList.toggle("theme-toggle-dot--on", isLight);
+        }
+
+        function setTheme(theme) {
+          const isLight = theme === "light";
+          root.classList.toggle("light", isLight);
+          localStorage.setItem("theme", isLight ? "light" : "dark");
+          syncToggleUi(isLight);
+        }
+
+        syncToggleUi(root.classList.contains("light"));
+
+        toggle.addEventListener("click", () => {
+          setTheme(root.classList.contains("light") ? "dark" : "light");
+        });
+      })();
+    </script>
+  </body>
+</html>
