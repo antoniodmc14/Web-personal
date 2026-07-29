@@ -36,6 +36,55 @@ body {
   .md-no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .site-shell {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-layout {
+    height: 100%;
+  }
+
+  .site-sidebar {
+    padding-top: 1.5rem;
+  }
+
+  main.md-no-scrollbar {
+    height: 100%;
+    max-height: 100%;
+    padding-top: 6.25rem;
+    padding-bottom: 6rem;
+    box-sizing: border-box;
+  }
+
+  .site-footer {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    left: 1rem;
+    z-index: 10;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) and (hover: hover) {
+  #selected article > a.block.w-full,
+  #selected .neobank-gallery-trigger {
+    display: block;
+    overflow: hidden;
+  }
+
+  #selected article > a.block.w-full img,
+  #selected .neobank-gallery-trigger img {
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+  }
+
+  #selected article > a.block.w-full:hover img,
+  #selected .neobank-gallery-trigger:hover img {
+    transform: scale(1.03);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -83,8 +132,8 @@ html.light #copy-email-btn:hover {
 }
 
 html.light .theme-project-button:hover {
-  color: #ffffff !important;
-  background-color: #5d7cff !important;
+  color: #5d7cff !important;
+  background-color: transparent !important;
   border-color: #5d7cff !important;
 }
 
@@ -122,4 +171,359 @@ header h1,
   #theme-toggle-dot {
     transition: none;
   }
+
+  .neobank-lightbox,
+  .neobank-lightbox__nav,
+  .neobank-lightbox__close,
+  .nb-stage__bg {
+    transition: none;
+  }
+}
+
+/* ── NeoBank lightbox ── */
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.neobank-gallery-trigger {
+  cursor: pointer;
+}
+
+.neobank-gallery-trigger:focus-visible {
+  outline: 1px solid #9c9c9c;
+  outline-offset: 2px;
+}
+
+.neobank-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neobank-lightbox.hidden {
+  display: none;
+}
+
+.neobank-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  padding: 0;
+}
+
+html.light .neobank-lightbox__backdrop {
+  background: rgba(240, 240, 240, 0.3);
+}
+
+.neobank-lightbox__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 100dvh;
+  padding: 4.5rem 0.75rem 3rem;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.neobank-lightbox__close,
+.neobank-lightbox__nav,
+.nb-stage,
+.neobank-lightbox__counter {
+  pointer-events: auto;
+}
+
+.neobank-lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  color: #a3a3a3;
+  cursor: pointer;
+  transition: none;
+}
+
+.neobank-lightbox__close svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.neobank-lightbox__close:hover {
+  color: #a3a3a3;
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+}
+
+.neobank-lightbox__close:focus-visible {
+  outline: none;
+}
+
+.neobank-lightbox__nav {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  color: #a3a3a3;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  align-self: center;
+}
+
+.neobank-lightbox__nav svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+  color: inherit;
+  stroke: currentColor;
+  transition: transform 0.15s ease;
+}
+
+.neobank-lightbox__nav-bracket {
+  font-family: "Helvetica Neue LT Pro", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.neobank-lightbox__nav:hover {
+  color: #a3a3a3;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.neobank-lightbox__nav:focus-visible {
+  outline: 1px solid #5d7cff;
+  outline-offset: 2px;
+}
+
+.neobank-lightbox__nav--prev {
+  left: 0.75rem;
+}
+
+.neobank-lightbox__nav--prev:active svg {
+  transform: translateX(-3px);
+}
+
+.nb-stage {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100dvh - 8rem);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.nb-stage__background-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.nb-stage__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 115%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.nb-stage__track {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nb-stage__track::-webkit-scrollbar {
+  display: none;
+}
+
+.nb-stage__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.nb-stage__slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.neobank-lightbox__nav--next {
+  right: 0.75rem;
+}
+
+.neobank-lightbox__nav--next:active svg {
+  transform: translateX(3px);
+}
+
+.neobank-lightbox__counter {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 1rem 0 0;
+  font-family: "Helvetica Neue LT Pro", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: -0.2px;
+  color: #a3a3a3;
+}
+
+.neobank-lightbox__close svg {
+  color: inherit;
+  stroke: currentColor;
+}
+
+html.light .neobank-lightbox__nav,
+html.light .neobank-lightbox__nav:hover,
+html.light .neobank-lightbox__nav-bracket,
+html.light .neobank-lightbox__nav svg,
+html.light .neobank-lightbox__close,
+html.light .neobank-lightbox__close:hover,
+html.light .neobank-lightbox__close svg,
+html.light .neobank-lightbox__counter {
+  color: #666666;
+}
+
+@media (min-width: 768px) {
+  .nb-stage {
+    grid-column: 2;
+    grid-row: 1;
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: 85dvh;
+    max-height: calc(100dvh - 7rem);
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .nb-stage__bg {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .nb-stage__slide {
+    padding: 1.5rem 1rem;
+  }
+
+  .nb-stage__slide img {
+    width: auto;
+    max-width: 100%;
+    max-height: 94%;
+    object-fit: contain;
+  }
+
+  .neobank-lightbox__content {
+    padding: 2.5rem 2rem 1.5rem;
+  }
+
+  .neobank-lightbox__close {
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .neobank-lightbox__nav {
+    position: static;
+    transform: none;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .neobank-lightbox__nav--prev {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .neobank-lightbox__nav--next {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nb-stage__track {
+    scroll-behavior: auto;
+  }
+
+  .nb-stage__bg {
+    will-change: auto;
+  }
+
 }

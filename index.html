@@ -19,9 +19,9 @@
   </head>
 
   <body class="bg-[#171717] font-helvetica font-normal text-white antialiased">
-    <div class="flex min-h-screen flex-col px-4 py-6 md:relative md:flex md:h-screen md:max-h-screen md:flex-col md:overflow-hidden">
-      <div class="flex min-h-0 flex-1 flex-col md:flex md:flex-row md:gap-8 md:w-full md:max-w-full md:overflow-hidden">
-        <div class="flex flex-col md:w-[28%] md:shrink-0">
+    <div class="site-shell flex min-h-screen flex-col px-4 py-6 md:relative md:flex md:h-screen md:max-h-screen md:flex-col md:overflow-hidden">
+      <div class="site-layout flex min-h-0 flex-1 flex-col md:flex md:flex-row md:gap-8 md:w-full md:max-w-full md:overflow-hidden">
+        <div class="site-sidebar flex flex-col md:w-[28%] md:shrink-0">
           <header class="fixed top-0 left-0 z-50 flex w-full items-start justify-between bg-transparent px-4 pb-4 pt-6 md:static md:w-full md:shrink-0 md:bg-transparent md:p-0">
             <div>
               <h1 class="font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white md:text-[24px] md:leading-[28px]">
@@ -86,22 +86,25 @@
           <div id="main-scroll-content">
           <section id="selected" class="mt-auto flex flex-col gap-6 transition-opacity duration-300 opacity-100 md:w-full">
             <div class="flex flex-col gap-12 lg:gap-16 xl:gap-24">
-              <div class="flex w-full flex-col gap-4 md:flex-col md:items-end lg:items-start">
-                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[85%] md:max-w-2xl">
+              <div class="flex w-full flex-col gap-4 md:flex-col md:items-center lg:items-start">
+                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[78%] md:max-w-[580px]">
                   <div class="mb-4 flex w-full items-center justify-between">
                     <a
                       href="https://projectkore.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="project-title font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white transition-colors duration-300 hover:opacity-80 cursor-pointer"
+                      data-value="Kore"
+                      data-scramble-duration="120"
+                      aria-label="Kore"
                     >
-                      Kore
+                      <span class="scramble-text pointer-events-none" aria-hidden="true">Kore</span>
                     </a>
                     <a
                       href="https://projectkore.netlify.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-[#5D7CFF] hover:text-white focus:outline-none"
+                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-transparent hover:text-[#5D7CFF] focus:outline-none"
                     >
                       Live
                     </a>
@@ -125,22 +128,25 @@
                   </article>
               </div>
 
-              <div class="flex w-full flex-col gap-4 md:flex-col md:items-end lg:items-start">
-                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[85%] md:max-w-2xl">
+              <div class="flex w-full flex-col gap-4 md:flex-col md:items-center lg:items-start">
+                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[78%] md:max-w-[580px]">
                   <div class="mb-4 flex w-full items-center justify-between">
                     <a
                       href="https://shop-0001.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="project-title font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white transition-colors duration-300 hover:opacity-80 cursor-pointer"
+                      data-value="Shop_0001"
+                      data-scramble-duration="170"
+                      aria-label="Shop_0001"
                     >
-                      Shop_0001
+                      <span class="scramble-text pointer-events-none" aria-hidden="true">Shop_0001</span>
                     </a>
                     <a
                       href="https://shop-0001.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-[#5D7CFF] hover:text-white focus:outline-none"
+                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-transparent hover:text-[#5D7CFF] focus:outline-none"
                     >
                       Live
                     </a>
@@ -161,6 +167,85 @@
                       <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Tailwind</span>
                       <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Javascript</span>
                       <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Shopify API</span>
+                    </div>
+                  </article>
+              </div>
+
+              <div class="flex w-full flex-col gap-4 md:flex-col md:items-center lg:items-start">
+                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[78%] md:max-w-[580px]">
+                  <div class="mb-4 flex w-full items-center justify-between">
+                    <a
+                      href="https://aperolifestore.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-title font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white transition-colors duration-300 hover:opacity-80 cursor-pointer"
+                      data-value="Apero Lifestore"
+                      data-scramble-duration="220"
+                      aria-label="Apero Lifestore"
+                    >
+                      <span class="scramble-text pointer-events-none" aria-hidden="true">Apero Lifestore</span>
+                    </a>
+                    <a
+                      href="https://aperolifestore.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="theme-project-button inline-flex items-center justify-center rounded-full border border-[#9C9C9C] px-3 py-1 font-helvetica text-[11px] uppercase tracking-[0.5px] text-[#9C9C9C] transition-all duration-300 hover:border-[#5D7CFF] hover:bg-transparent hover:text-[#5D7CFF] focus:outline-none"
+                    >
+                      Live
+                    </a>
+                  </div>
+                  <a href="https://aperolifestore.com/" target="_blank" rel="noopener noreferrer" class="block w-full">
+                      <img
+                        src="img/AperoLifestore.png"
+                        alt="Apero Lifestore Preview"
+                        class="w-full h-auto object-cover"
+                      />
+                    </a>
+                    <p class="mt-4 font-helvetica text-[14px] font-normal leading-[18px] tracking-[-0.5px] text-[#9C9C9C] md:w-full md:text-[16px] md:leading-[22px]">
+                      E-commerce management, content curation, and digital brand presence for Apero Lifestore. Focused on catalog optimization on Shopify, visual identity, Mailchimp newsletter campaigns, and social media strategy.
+                    </p>
+                    <div class="mt-4 flex w-full flex-wrap gap-x-2 gap-y-2">
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Shopify</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Figma</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Mailchimp</span>
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">InDesign</span>
+                    </div>
+                  </article>
+              </div>
+
+              <div class="flex w-full flex-col gap-4 md:flex-col md:items-center lg:items-start">
+                <article class="flex w-full flex-col border-b border-[#9C9C9C] pb-8 md:w-[78%] md:max-w-[580px]">
+                  <div class="mb-4 flex w-full items-center justify-between">
+                    <button
+                      type="button"
+                      id="neobank-title-trigger"
+                      class="project-title cursor-pointer border-0 bg-transparent p-0 text-left font-helvetica text-[20px] font-normal leading-[24px] tracking-[-0.5px] text-white transition-colors duration-300"
+                      data-value="NeoBank"
+                      data-scramble-duration="150"
+                      aria-label="Open NeoBank image gallery"
+                      aria-haspopup="dialog"
+                      aria-controls="neobank-lightbox"
+                    >
+                      <span class="scramble-text pointer-events-none" aria-hidden="true">NeoBank</span>
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    id="neobank-gallery-trigger"
+                    class="neobank-gallery-trigger block w-full cursor-pointer border-0 bg-transparent p-0 text-left"
+                    aria-label="Open NeoBank image gallery"
+                  >
+                      <img
+                        src="img/Neobank_01.png"
+                        alt="NeoBank App Design Preview"
+                        class="w-full h-auto object-cover"
+                      />
+                    </button>
+                    <p class="mt-4 font-helvetica text-[14px] font-normal leading-[18px] tracking-[-0.5px] text-[#9C9C9C] md:w-full md:text-[16px] md:leading-[22px]">
+                      NeoBank is a decentralized, self-custodial neobank designed to bridge traditional finance with the Web3 ecosystem. The platform allows users to manage, spend, and invest both fiat and cryptocurrencies from a single interface, without intermediaries while retaining full control of their assets at all times.
+                    </p>
+                    <div class="mt-4 flex w-full flex-wrap gap-x-2 gap-y-2">
+                      <span class="text-[14px] font-normal tracking-[-0.2px] text-[#9C9C9C] md:text-[15px]">Figma</span>
                     </div>
                   </article>
               </div>
@@ -270,11 +355,145 @@
         </div>
       </div>
 
-      <footer class="mt-auto w-full shrink-0 pt-16 md:pb-6 md:pt-0">
+      <footer class="site-footer mt-auto w-full shrink-0 pt-16 md:pb-6 md:pt-0">
         <p class="text-left text-[12px] text-[#818181] md:w-[20%]">
           © 2026
         </p>
       </footer>
+    </div>
+
+    <div
+      id="neobank-lightbox"
+      class="neobank-lightbox hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="NeoBank image gallery"
+      aria-hidden="true"
+      hidden
+    >
+      <button type="button" class="neobank-lightbox__backdrop" data-lightbox-close aria-label="Close gallery"></button>
+
+      <div class="neobank-lightbox__content" data-lenis-prevent>
+        <button type="button" class="neobank-lightbox__close" data-lightbox-close aria-label="Close gallery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="neobank-lightbox__nav neobank-lightbox__nav--prev" aria-label="Previous image">
+          <span class="neobank-lightbox__nav-bracket" aria-hidden="true">[</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span class="neobank-lightbox__nav-bracket" aria-hidden="true">]</span>
+        </button>
+
+        <div class="nb-stage" aria-label="NeoBank gallery">
+          <picture class="nb-stage__background-layer" aria-hidden="true">
+            <source media="(min-width: 768px)" srcset="img/Background_modal_desktop.png" />
+            <img
+              id="nb-stage-background"
+              class="nb-stage__bg"
+              src="img/Background_modal.png"
+              alt=""
+              draggable="false"
+            />
+          </picture>
+          <div id="nb-stage-track" class="nb-stage__track" data-lenis-prevent>
+            <div class="nb-stage__slide" data-slide-index="0">
+              <img
+                src="img/NeoBank_001.png"
+                alt="NeoBank mobile interface 1"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="1">
+              <img
+                src="img/NeoBank_002.png"
+                alt="NeoBank mobile interface 2"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="2">
+              <img
+                src="img/NeoBank_003.png"
+                alt="NeoBank mobile interface 3"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="3">
+              <img
+                src="img/NeoBank_004.png"
+                alt="NeoBank mobile interface 4"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="4">
+              <img
+                src="img/NeoBank_005.png"
+                alt="NeoBank mobile interface 5"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="5">
+              <img
+                src="img/NeoBank_006.png"
+                alt="NeoBank mobile interface 6"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="6">
+              <img
+                src="img/NeoBank_007.png"
+                alt="NeoBank mobile interface 7"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="7">
+              <img
+                src="img/NeoBank_008.png"
+                alt="NeoBank mobile interface 8"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="8">
+              <img
+                src="img/NeoBank_009.png"
+                alt="NeoBank mobile interface 9"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+            <div class="nb-stage__slide" data-slide-index="9">
+              <img
+                src="img/NeoBank_010.png"
+                alt="NeoBank mobile interface 10"
+                draggable="false"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="neobank-lightbox__nav neobank-lightbox__nav--next" aria-label="Next image">
+          <span class="neobank-lightbox__nav-bracket" aria-hidden="true">[</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+          <span class="neobank-lightbox__nav-bracket" aria-hidden="true">]</span>
+        </button>
+
+        <p id="neobank-lightbox-counter" class="neobank-lightbox__counter" aria-live="polite"></p>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
@@ -360,6 +579,7 @@
           lenis = new Lenis({
             wrapper: mainElement,
             content: mainScrollContent,
+            eventsTarget: document.documentElement,
             lerp: 0.08,
             smoothWheel: true,
             syncTouch: true,
@@ -486,6 +706,12 @@
         }
       });
 
+      window.addEventListener("load", () => {
+        if (typeof lenis !== "undefined" && lenis) {
+          lenis.resize();
+        }
+      });
+
       window.addEventListener("hashchange", () => {
         handleRoute(false);
       });
@@ -502,32 +728,37 @@
       function runTextScramble(link, textEl) {
         const value = link.dataset.value;
         if (!value) return;
+        const duration = Number(link.dataset.scrambleDuration) || 160;
 
-        if (link._scrambleInterval) {
-          clearInterval(link._scrambleInterval);
+        if (link._scrambleFrame) {
+          cancelAnimationFrame(link._scrambleFrame);
         }
 
-        let iteration = 0;
+        const startTime = performance.now();
 
-        link._scrambleInterval = setInterval(() => {
+        function animateScramble(currentTime) {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const resolvedCharacters = Math.ceil(progress * value.length);
+
           textEl.textContent = value
             .split("")
             .map((char, index) => {
               if (char === " ") return " ";
-              if (index < iteration) return value[index];
+              if (index < resolvedCharacters) return value[index];
               return scrambleLetters[Math.floor(Math.random() * scrambleLetters.length)];
             })
             .join("");
 
-          if (iteration >= value.length) {
-            clearInterval(link._scrambleInterval);
-            link._scrambleInterval = null;
+          if (progress >= 1) {
+            link._scrambleFrame = null;
             textEl.textContent = value;
             return;
           }
 
-          iteration += 0.5;
-        }, 20);
+          link._scrambleFrame = requestAnimationFrame(animateScramble);
+        }
+
+        link._scrambleFrame = requestAnimationFrame(animateScramble);
       }
 
       document.querySelectorAll(".scramble-trigger").forEach((link) => {
@@ -537,8 +768,44 @@
         link.style.minWidth = `${link.offsetWidth}px`;
 
         link.addEventListener("mouseenter", () => {
-          if (link._scrambleInterval) return;
+          if (link._scrambleFrame) return;
           runTextScramble(link, textEl);
+        });
+      });
+
+      document.querySelectorAll("#selected .project-title").forEach((title) => {
+        const textEl = title.querySelector(".scramble-text");
+
+        if (!textEl || !title.dataset.value) return;
+
+        function lockProjectTitleWidth() {
+          const width = Math.ceil(textEl.getBoundingClientRect().width);
+          if (!width) return;
+
+          title.style.display = "inline-block";
+          title.style.width = `${width}px`;
+          title.style.minWidth = `${width}px`;
+          title.style.maxWidth = `${width}px`;
+          title.style.flexShrink = "0";
+          title.style.whiteSpace = "nowrap";
+          textEl.style.display = "inline-block";
+        }
+
+        function triggerProjectScramble() {
+          if (title._scrambleFrame) return;
+          runTextScramble(title, textEl);
+        }
+
+        lockProjectTitleWidth();
+        title.addEventListener("mouseenter", triggerProjectScramble);
+
+        document.fonts?.ready.then(() => {
+          if (!title._scrambleFrame) {
+            title.style.width = "";
+            title.style.minWidth = "";
+            title.style.maxWidth = "";
+            lockProjectTitleWidth();
+          }
         });
       });
 
@@ -618,6 +885,236 @@
             isTransitioning = false;
           }, 2000);
         }
+      })();
+
+      (function initNeobankLightbox() {
+        const trigger = document.getElementById("neobank-gallery-trigger");
+        const titleTrigger = document.getElementById("neobank-title-trigger");
+        const lightbox = document.getElementById("neobank-lightbox");
+        const counterEl = document.getElementById("neobank-lightbox-counter");
+        const prevBtn = lightbox?.querySelector(".neobank-lightbox__nav--prev");
+        const nextBtn = lightbox?.querySelector(".neobank-lightbox__nav--next");
+        const mobileTrack = document.getElementById("nb-stage-track");
+        const mobileBackground = document.getElementById("nb-stage-background");
+        const mobileSlides = Array.from(lightbox?.querySelectorAll(".nb-stage__slide") || []);
+
+        if (
+          !trigger ||
+          !titleTrigger ||
+          !lightbox ||
+          !counterEl ||
+          !prevBtn ||
+          !nextBtn ||
+          !mobileTrack ||
+          !mobileBackground ||
+          !mobileSlides.length
+        ) {
+          return;
+        }
+
+        let currentIndex = 0;
+        let activeTrigger = trigger;
+        let parallaxFrame = null;
+        let isNavigating = false;
+        let navigationUnlockTimeout = null;
+        let mobileSlidesPreloaded = false;
+        const preloadedMobileImages = [];
+        const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        function isMobileGallery() {
+          return window.innerWidth < 768;
+        }
+
+        function updateMobileCounter(index) {
+          currentIndex = Math.max(0, Math.min(index, mobileSlides.length - 1));
+          counterEl.textContent = `[ ${currentIndex + 1} / ${mobileSlides.length} ]`;
+        }
+
+        function getNearestSlideIndex() {
+          if (!mobileTrack.clientWidth) return currentIndex;
+          return Math.round(mobileTrack.scrollLeft / mobileTrack.clientWidth);
+        }
+
+        function releaseNavigationLock() {
+          clearTimeout(navigationUnlockTimeout);
+          navigationUnlockTimeout = null;
+          isNavigating = false;
+          updateMobileCounter(getNearestSlideIndex());
+        }
+
+        function scheduleNavigationUnlock(delay = 900) {
+          clearTimeout(navigationUnlockTimeout);
+          navigationUnlockTimeout = setTimeout(releaseNavigationLock, delay);
+        }
+
+        function scrollToMobileSlide(index, behavior = "smooth") {
+          const nextIndex = (index + mobileSlides.length) % mobileSlides.length;
+          isNavigating = true;
+          updateMobileCounter(nextIndex);
+          scheduleNavigationUnlock();
+
+          mobileTrack.scrollTo({
+            left: nextIndex * mobileTrack.clientWidth,
+            behavior: reducedMotionQuery.matches ? "auto" : behavior,
+          });
+        }
+
+        const mobileSlideObserver = new IntersectionObserver(
+          function () {
+            if (lightbox.hidden || isNavigating) return;
+            updateMobileCounter(getNearestSlideIndex());
+          },
+          {
+            root: mobileTrack,
+            threshold: [0.5, 0.6, 0.75, 0.9],
+          }
+        );
+
+        mobileSlides.forEach(function (slide) {
+          mobileSlideObserver.observe(slide);
+        });
+
+        function preloadMobileSlides() {
+          if (mobileSlidesPreloaded) return;
+          mobileSlidesPreloaded = true;
+
+          mobileSlides.forEach(function (slide) {
+            const sourceImage = slide.querySelector("img");
+            if (!sourceImage) return;
+
+            const preloadImage = new Image();
+            preloadImage.decoding = "async";
+            preloadImage.src = sourceImage.src;
+            preloadedMobileImages.push(preloadImage);
+          });
+        }
+
+        function updateMobileParallax() {
+          parallaxFrame = null;
+
+          if (reducedMotionQuery.matches || !isMobileGallery()) {
+            mobileBackground.style.transform = "";
+            return;
+          }
+
+          const maxScroll = mobileTrack.scrollWidth - mobileTrack.clientWidth;
+          const progress = maxScroll > 0 ? mobileTrack.scrollLeft / maxScroll : 0;
+          const maxTravel = mobileTrack.clientWidth * 0.15;
+          mobileBackground.style.transform = `translate3d(${-progress * maxTravel}px, 0, 0)`;
+        }
+
+        mobileTrack.addEventListener(
+          "scroll",
+          function () {
+            if (isNavigating) {
+              scheduleNavigationUnlock(140);
+            }
+
+            if (parallaxFrame !== null) return;
+            parallaxFrame = requestAnimationFrame(updateMobileParallax);
+          },
+          { passive: true }
+        );
+
+        mobileTrack.addEventListener("scrollend", function () {
+          if (isNavigating) {
+            releaseNavigationLock();
+          } else {
+            updateMobileCounter(getNearestSlideIndex());
+          }
+        });
+
+        function openLightbox(startIndex, sourceTrigger = trigger) {
+          clearTimeout(navigationUnlockTimeout);
+          navigationUnlockTimeout = null;
+          isNavigating = false;
+          activeTrigger = sourceTrigger;
+          lightbox.hidden = false;
+          lightbox.classList.remove("hidden");
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("lightbox-open");
+
+          preloadMobileSlides();
+          mobileTrack.scrollLeft = startIndex * mobileTrack.clientWidth;
+          mobileBackground.style.transform = "";
+          updateMobileCounter(startIndex);
+
+          lightbox.querySelector(".neobank-lightbox__close")?.focus();
+        }
+
+        function closeLightbox() {
+          clearTimeout(navigationUnlockTimeout);
+          navigationUnlockTimeout = null;
+          isNavigating = false;
+          lightbox.classList.add("hidden");
+          lightbox.hidden = true;
+          lightbox.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("lightbox-open");
+          mobileBackground.style.transform = "";
+          activeTrigger.focus();
+        }
+
+        function showNext() {
+          scrollToMobileSlide(currentIndex + 1);
+        }
+
+        function showPrev() {
+          scrollToMobileSlide(currentIndex - 1);
+        }
+
+        trigger.addEventListener("click", function () {
+          openLightbox(0, trigger);
+        });
+
+        titleTrigger.addEventListener("click", function () {
+          openLightbox(0, titleTrigger);
+        });
+
+        trigger.addEventListener("pointerenter", preloadMobileSlides, { once: true });
+        trigger.addEventListener("touchstart", preloadMobileSlides, {
+          once: true,
+          passive: true,
+        });
+        titleTrigger.addEventListener("pointerenter", preloadMobileSlides, { once: true });
+        titleTrigger.addEventListener("touchstart", preloadMobileSlides, {
+          once: true,
+          passive: true,
+        });
+
+        prevBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          showPrev();
+        });
+
+        nextBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          showNext();
+        });
+
+        lightbox.querySelectorAll("[data-lightbox-close]").forEach(function (el) {
+          el.addEventListener("click", function () {
+            closeLightbox();
+          });
+        });
+
+        lightbox.querySelector(".neobank-lightbox__content")?.addEventListener("click", function (event) {
+          event.stopPropagation();
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (lightbox.hidden) return;
+
+          if (event.key === "Escape") {
+            closeLightbox();
+          } else if (event.key === "ArrowRight") {
+            event.preventDefault();
+            showNext();
+          } else if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            showPrev();
+          }
+        });
+
       })();
 
       (function initThemeToggle() {
