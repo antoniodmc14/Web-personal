@@ -3,8 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Antonio Domínguez — UX/UI & Web Designer portfolio" />
-    <title>Antonio Domínguez — Portfolio</title>
+    <meta name="description" content="Antonio Domínguez — UX/UI & web designer based in Málaga, Spain. Custom, high-performance websites: from Figma prototypes to responsive front-end builds and headless e-commerce." />
+    <title>Antonio Domínguez — UX/UI & Web Designer | Málaga, Spain</title>
+
+    <link rel="canonical" href="https://dominguezantonio.com/" />
+    <link rel="alternate" hreflang="en" href="https://dominguezantonio.com/" />
+    <link rel="alternate" hreflang="es" href="https://dominguezantonio.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://dominguezantonio.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dominguezantonio.com/" />
+    <meta property="og:title" content="Antonio Domínguez — UX/UI & Web Designer" />
+    <meta property="og:description" content="Custom, high-performance websites: from Figma prototypes to responsive front-end builds and headless e-commerce. Based in Málaga, Spain." />
+    <meta property="og:image" content="https://dominguezantonio.com/img/Kore_Project_01.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://dominguezantonio.com/#person",
+            "name": "Antonio Domínguez",
+            "jobTitle": "UX/UI & Web Designer",
+            "url": "https://dominguezantonio.com/",
+            "email": "mailto:dominguezantoniowork@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Málaga",
+              "addressCountry": "ES"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/antonio-dom%C3%ADnguez-mart%C3%ADn-28553014a",
+              "https://github.com/antoniodmc14"
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://dominguezantonio.com/#service",
+            "name": "Antonio Domínguez — Diseño Web",
+            "description": "Diseño web a medida, diseño UX/UI, desarrollo front-end y tiendas online headless en Málaga, España.",
+            "url": "https://dominguezantonio.com/",
+            "email": "dominguezantoniowork@gmail.com",
+            "founder": { "@id": "https://dominguezantonio.com/#person" },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Málaga",
+              "addressCountry": "ES"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Málaga"
+            },
+            "serviceType": [
+              "Diseño web",
+              "Diseño web a medida",
+              "Diseño UX/UI",
+              "Desarrollo front-end",
+              "E-commerce headless"
+            ]
+          }
+        ]
+      }
+    </script>
 
     <link rel="stylesheet" href="styles-compiled.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -32,19 +96,30 @@
               </p>
             </div>
 
-            <button
-              type="button"
-              id="theme-toggle"
-              role="switch"
-              class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border border-[#9C9C9C] transition-colors duration-300 focus:outline-none md:absolute md:top-6 md:right-4 md:z-50"
-              aria-label="Toggle theme"
-              aria-checked="false"
-            >
-              <span
-                id="theme-toggle-dot"
-                class="pointer-events-none inline-block h-3.5 w-3.5 translate-x-[2px] translate-y-[2px] transform rounded-full bg-[#9C9C9C] shadow-sm ring-0 transition-transform duration-300 ease-in-out"
-              ></span>
-            </button>
+            <div class="flex items-center gap-3">
+              <a
+                href="es/index.html"
+                hreflang="es"
+                lang="es"
+                class="font-helvetica text-[12px] font-normal leading-[20px] tracking-[-0.5px] text-[#9C9C9C] transition-colors duration-300 hover:text-[#5D7CFF] md:absolute md:top-6 md:right-16 md:z-50"
+                aria-label="Ver esta web en español"
+              >
+                ES
+              </a>
+              <button
+                type="button"
+                id="theme-toggle"
+                role="switch"
+                class="relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border border-[#9C9C9C] transition-colors duration-300 focus:outline-none md:absolute md:top-6 md:right-4 md:z-50"
+                aria-label="Toggle theme"
+                aria-checked="false"
+              >
+                <span
+                  id="theme-toggle-dot"
+                  class="pointer-events-none inline-block h-3.5 w-3.5 translate-x-[2px] translate-y-[2px] transform rounded-full bg-[#9C9C9C] shadow-sm ring-0 transition-transform duration-300 ease-in-out"
+                ></span>
+              </button>
+            </div>
           </header>
 
           <nav class="mt-[110px] md:mt-8" aria-label="Primary">
